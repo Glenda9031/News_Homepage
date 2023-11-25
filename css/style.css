@@ -249,3 +249,96 @@ header a:hover {
   line-height: 1.6;
   color: var(--dark-grayish-blue);
 }
+
+@media (min-width: 48rem) {
+  main {
+    display: grid;
+    grid-template-areas: 
+      "nav nav"
+      "header new"
+      "top top";
+    column-gap: 1.5rem;
+    row-gap: 3.5rem;  
+  }
+
+  nav {
+    grid-area: nav;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .menu-btn {
+    display: none;
+  }
+
+  .nav-list {
+    position: static;
+    height: auto;
+    width: auto;
+    display: flex;
+  }
+
+  .nav-list ul {
+    flex-direction: row;
+    gap: 2.5rem;
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    padding: 0;
+    width: auto;
+  }
+
+  .nav-list .menu-btn {
+    display: none;
+  }
+
+  header {
+    grid-area: header;
+    padding: 0;
+  }
+
+  header section {
+    margin-bottom: 0;
+  }
+
+  .new {
+    grid-area: new;
+    margin: 0;
+  }
+
+  .top {
+    grid-area: top;
+  }
+}
+
+@media (min-width: 62rem) {
+  .top {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 80rem) {
+  main {
+    grid-template-columns: 1fr 21.875rem;
+  }
+
+  nav{
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  header section {
+    display: grid;
+    grid-template-columns: 1fr 21.875rem;
+  }
+
+  header h1 {
+    font-size: 3.5rem;
+    line-height: 1.6;
+  }
+
+  header p {
+    margin-top: 0;
+  }
+}
+
+
